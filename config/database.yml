@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: danvelozo
+  password: 12345
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: reddit_clone_development
+
+test:
+  <<: *default
+  database: reddit_clone_test
+
+production:
+  <<: *default
+  database: reddit_clone_production
+  username: reddit_clone
+  password: <%= ENV['REDDIT_CLONE_DATABASE_PASSWORD'] %>

@@ -1,0 +1,14 @@
+.upvote, .downvote {
+  display: block;
+  width: 100%;
+  color: #000;
+ 
+ &.active {
+   color: #ff0000;
+ }
+
+ &:hover {
+   color: #ff0000;
+   cursor: pointer;
+ }
+}
